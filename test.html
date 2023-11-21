@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Greenden</title>
+    <!-- Tailwindcss -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .header{
+            background-color: black;
+            color: white;
+            margin: 3px;
+            text-align: center;
+        }
+        
+        .footer{
+            background-color:black;
+            color:white;
+            margin: 3px;
+            text-align: center;
+
+            
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 4fr 1fr; 
+            /* background-color: blue; */
+            
+
+        }
+        .middle{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            margin: 3px;
+            
+        }
+        .one{
+            background-color: aqua;
+            margin: 3px;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+        .two{
+            background-color: blueviolet;
+            margin: 3px;
+            /* display: grid;
+            justify-content: center; */
+        }
+        .twosec{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 8px;
+        }
+        .twosec p{
+            margin: 3px;
+            background-color: brown;
+            padding: 20px;
+            text-align: center;
+            
+        }
+        .article p{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="middle">
+            <div class="one">Aside</div>
+            <div class="two">
+                <div class="article"><p>Article</p></div>
+                
+                <div class="twosec">
+                    <p>Image</p>
+                    <p>Image</p>
+                    <p>Image</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+  </body>
+  </html>

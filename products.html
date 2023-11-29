@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Greenden</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- Tailwindcss -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
@@ -16,8 +16,8 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-lg sticky top-0">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="openmenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
@@ -28,48 +28,69 @@
             <li><a class="hover:text-black hover:underline" href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
+    <!-- Sidenav -->
+    <div id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%;height: 100vh;right: -50%;">
+        <div class="text-right p-5">
+            <p id="closemenu" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex gap-10 text-gray-500  flex-col items-center">
+            <li><a class="hover:text-black hover:underline" href="index.html">Home</a></li>
+            <li><a class="hover:text-black hover:underline" href="products.html">Products</a></li>
+            <li><a class="hover:text-black hover:underline" href="contact.html">Contact Us</a></li>
+        </ul>
+        </nav>
+
+    </div>
     <section class="text-center p-4">
         <h1 class="text-2xl font-bold ">Our Products</h1>
-        <div class="grid grid-cols-2 mt-5 md:grid-cols-4 gap-5">
+        <input id="search" class="border  mt-2 border-black p-2" placeholder="Search a Product" style="width:80%"
+            type="text">
+        <div class="grid grid-cols-2 mt-5 md:grid-cols-4 gap-5" id="product-container">
             <div>
                 <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
                 <h1>Rose Plant</h1>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
+                <h1>Lily Plant</h1>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
+                <h1>Red Plant</h1>
+                <p>$20</p>
+
+            </div>
+            <div>
+                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
+                <h1>White Plant</h1>
+                <p>$20</p>
+
+            </div>
+            <div>
+                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
+                <h1>Plant</h1>
+                <p>$20</p>
+
+            </div>
+            <div>
+                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
+                <h1>Brown Plant</h1>
+                <p>$20</p>
+
+            </div>
+            <div>
+                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
+                <h1>Pinky Plant</h1>
                 <h1>$20</h1>
             </div>
             <div>
                 <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
-                <h1>Rose Plant</h1>
-                <h1>$20</h1>
-            </div>
-            <div>
-                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
-                <h1>Rose Plant</h1>
-                <h1>$20</h1>
-            </div>
-            <div>
-                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
-                <h1>Rose Plant</h1>
-                <h1>$20</h1>
-            </div>
-            <div>
-                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
-                <h1>Rose Plant</h1>
-                <h1>$20</h1>
-            </div>
-            <div>
-                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
-                <h1>Rose Plant</h1>
-                <h1>$20</h1>
-            </div>
-            <div>
-                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
-                <h1>Rose Plant</h1>
-                <h1>$20</h1>
-            </div>
-            <div>
-                <img src="./images/pot.jpg" class="inline hover:shadow-2xl" alt="Plant Image">
-                <h1>Rose Plant</h1>
-                <h1>$20</h1>
+                <h1>Rose</h1>
+                <p>$20</p>
+
             </div>
         </div>
     </section>
@@ -79,7 +100,7 @@
         <p>@ 2023, Greenden.com</p>
 
     </footer>
-
+    <script src="./products.js"></script>
 </body>
 
 </html>
